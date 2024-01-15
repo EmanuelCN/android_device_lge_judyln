@@ -16,8 +16,11 @@
 
 DEVICE_PATH := device/lge/judyln
 
+# inherit from the proprietary version
+include vendor/lge/judyln/BoardConfigVendor.mk
+
 # inherit from common v30
--include device/lge/sdm845-common/BoardConfigCommon.mk
+include device/lge/sdm845-common/BoardConfigCommon.mk
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -37,8 +40,3 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 1048576000
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.judyln
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
-
-#TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
-
-# inherit from the proprietary version
--include vendor/lge/judyln/BoardConfigVendor.mk
