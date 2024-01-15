@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lge/judyln/judyln-vendor.mk)
+$(call inherit-product, vendor/lge/judyln/judyln-vendor.mk)
 
 DEVICE_PATH := device/lge/judyln
 
@@ -39,10 +39,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(DEVICE_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     $(DEVICE_PATH)/audio/mixer_paths_tavil.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_tavil.xml
-
-# HBM
-PRODUCT_PACKAGES += \
-    HBMTrigger
 
 # Init
 PRODUCT_COPY_FILES += \
@@ -73,9 +69,6 @@ PRODUCT_COPY_FILES += \
 
 # NQ Client
 PRODUCT_PACKAGES += \
-    jcos_nq_client \
-    ls_nq_client \
-    se_nq_extn_client \
     libchrome.vendor
 
 # Remove unwanted packages

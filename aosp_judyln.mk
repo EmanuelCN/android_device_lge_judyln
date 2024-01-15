@@ -50,6 +50,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=judyln \
     PRODUCT_NAME=judyln_lao_com \
 
+BUILD_FINGERPRINT := "lge/judyln_lao_com/judyln:10/QKQ1.191222.002/8450100201101:user/release-keys"
+
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
