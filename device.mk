@@ -16,10 +16,10 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/lge/judyln/judyln-vendor.mk)
-
 DEVICE_PATH := device/lge/judyln
+
+# Inherit from common tree
+$(call inherit-product, device/lge/sdm845-common/sdm845.mk)
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -71,12 +71,5 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.nfc_extras.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
-# NQ Client
-PRODUCT_PACKAGES += \
-    jcos_nq_client \
-    ls_nq_client \
-    se_nq_extn_client \
-    libchrome.vendor
-
-# common judy (sdm845)
-$(call inherit-product, device/lge/sdm845-common/sdm845.mk)
+# Get non-open-source specific aspects
+$(call inherit-product-if-exists, vendor/lge/judyln/judyln-vendor.mk)

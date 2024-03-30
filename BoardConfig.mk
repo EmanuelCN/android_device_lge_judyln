@@ -16,7 +16,7 @@
 
 DEVICE_PATH := device/lge/judyln
 
-# inherit from common v30
+# inherit from common tree
 -include device/lge/sdm845-common/BoardConfigCommon.mk
 
 # Bluetooth
@@ -39,9 +39,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.judyln
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
-
-#TARGET_PREBUILT_RECOVERY_RAMDISK_CPIO := $(DEVICE_PATH)/ramdisk-recovery.cpio
 
 # inherit from the proprietary version
 -include vendor/lge/judyln/BoardConfigVendor.mk
