@@ -26,15 +26,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from judyln device
 $(call inherit-product, device/lge/judyln/device.mk)
 
-# Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Device identifiers
 
-PRODUCT_NAME := aosp_judyln
+PRODUCT_NAME := lineage_judyln
 PRODUCT_DEVICE := judyln
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
