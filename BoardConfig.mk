@@ -26,7 +26,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 TARGET_USES_YCRCB_VENUS_CAMERA_PREVIEW := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hardware=judyln
+BOARD_KERNEL_CMDLINE += androidboot.hardware=judyln androidboot.fstab_suffix=judyln
 TARGET_KERNEL_CONFIG := lineageos_judyln_defconfig
 
 # Partitions
